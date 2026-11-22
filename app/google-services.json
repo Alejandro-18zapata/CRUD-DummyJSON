@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "300612794146",
+    "project_id": "inventarioapp-aula-fc603",
+    "storage_bucket": "inventarioapp-aula-fc603.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300612794146:android:046801a0ea9cb50b21577b",
+        "android_client_info": {
+          "package_name": "com.example.inventarioapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmKSDW9ImPcKzc2US57hvWCoV1Kru7QCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300612794146:android:05ce2840fe20400821577b",
+        "android_client_info": {
+          "package_name": "com.sena.crud_dummyjson"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmKSDW9ImPcKzc2US57hvWCoV1Kru7QCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

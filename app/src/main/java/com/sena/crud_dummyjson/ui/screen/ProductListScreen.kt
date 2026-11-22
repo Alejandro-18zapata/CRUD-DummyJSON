@@ -134,7 +134,7 @@ fun ProductListScreen(viewModel: ProductViewModel = hiltViewModel()) {
             onDismiss = { showEditor = false },
             onSave = { title, description, category, price ->
                 val model = ProductModel(
-                    id = editingProduct?.id ?: 0,
+                    id = editingProduct?.id.orEmpty(),
                     title = title,
                     description = description,
                     category = category,
