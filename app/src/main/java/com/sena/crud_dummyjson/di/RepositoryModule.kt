@@ -1,6 +1,6 @@
 package com.sena.crud_dummyjson.di
 
-import com.sena.crud_dummyjson.data.repository.ProductRepositoryImpl
+import com.sena.crud_dummyjson.data.repository.FirestoreProductRepository
 import com.sena.crud_dummyjson.domain.repository.ProductRepository
 import dagger.Binds
 import dagger.Module
@@ -15,6 +15,6 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindProductRepository(
-        impl: ProductRepositoryImpl
+        impl: FirestoreProductRepository
     ): ProductRepository
 }

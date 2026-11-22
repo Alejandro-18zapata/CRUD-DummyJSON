@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     alias(libs.plugins.google.ksp)
+    alias(libs.plugins.google.services) apply false
 }
 
 android {
@@ -49,6 +50,12 @@ dependencies {
     implementation(libs.retrofit.converter.moshi)
     implementation(libs.moshi.core)
     ksp(libs.moshi.kotlin.codegen)
+
+    // Firebase (Cloud Firestore)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.firestore)
+    implementation(libs.kotlinx.coroutines.play.services)
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
@@ -64,4 +71,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+}
+
+// Firebase solo se aplica cuando existe google-services.json.
+// Así el proyecto compila antes de conectar la app al proyecto de Firebase.
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
 }

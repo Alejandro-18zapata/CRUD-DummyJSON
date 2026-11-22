@@ -1,7 +1,15 @@
 package com.sena.crud_dummyjson
 
 import android.app.Application
+import com.google.firebase.FirebaseApp
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class Application : Application()
+class Application : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        runCatching {
+            FirebaseApp.initializeApp(this)
+        }
+    }
+}
